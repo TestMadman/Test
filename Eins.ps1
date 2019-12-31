@@ -1,3 +1,4 @@
+# Edit only this section!
 $TimesToRun = 2
 $RunTimeP = 1
 
