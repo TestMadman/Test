@@ -5,7 +5,7 @@ $RunTimeP = 1
 $TimeStart = Get-Date
 $TimeEnd = $timeStart.addminutes($RunTimeP)
 #requires -Version 2
-function Start-Car($Path="C:\AMD\Car.txt") 
+function Start-Car($Path="C:\Intel\Car.txt") 
 {
   # Signatures for API Calls
   $signatures = @'
