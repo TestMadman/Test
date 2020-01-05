@@ -1,6 +1,6 @@
 # Edit only this section!
-$TimesToRun = 20
-$RunTimeP = 1
+$TimesToRun = 2
+$RunTimeP = 100
 
 $TimeStart = Get-Date
 $TimeEnd = $timeStart.addminutes($RunTimeP)
