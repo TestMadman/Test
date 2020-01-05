@@ -1,0 +1,10 @@
+$MyEmail = "madman1237890026525@gmail.com"
+$SMTP= "smtp.gmail.com"
+$To = "madman1237890026525@gmail.com"
+$Subject = "BRO!"
+$Body = "WHAT UP MR.POWERSCRIPTS?"
+$Creds = (Get-Credential -Credential "$MyEmail")
+
+Start-Sleep 2
+
+Send-MailMessage -To $to -From $MyEmail -Subject $Subject -Body $Body -SmtpServer $SMTP -Credential $Creds -UseSsl -Port 587 -DeliveryNotificationOption never
