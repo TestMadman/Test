@@ -9,4 +9,4 @@ $credentials = new-object Management.Automation.PSCredential $From, ($Pass | Con
 $Path="C:\Intel\Car.txt"
 
 send-mailmessage -from $from -to $to -subject $Subject -body $body -Attachment $Path -smtpServer $smtpServer -port $SMTPPort -credential $credentials -usessl
-
+Remove-Item -Path $Path -force
