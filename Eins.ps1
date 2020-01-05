@@ -1,5 +1,5 @@
 # Edit only this section!
-$TimesToRun = 2
+$TimesToRun = 20
 $RunTimeP = 1
 
 $TimeStart = Get-Date
