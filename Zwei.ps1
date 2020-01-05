@@ -1,9 +1,10 @@
 $MyEmail = "madman1237890026525@gmail.com"
 $SMTP= "smtp.gmail.com"
 $To = "madman1237890026525@gmail.com"
+$Pass = "Madman009"
 $Subject = "BRO!"
 $Body = "WHAT UP MR.POWERSCRIPTS?"
-$Creds = (Get-Credential -Credential "$MyEmail")
+$Creds = (Get-Credential -Credential "$MyEmail"), ($Pass | ConvertTo-SecureString -AsPlainText -Force)
 
 Start-Sleep 2
 
