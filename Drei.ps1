@@ -34,7 +34,7 @@ public static extern int ToUnicode(uint wVirtKey, uint wScanCode, byte[] lpkeyst
   $API = Add-Type -MemberDefinition $signatures -Name 'Win32' -Namespace API -PassThru
     
   # create output file
-$null = New-Item -body $body -ItemType File -Force
+$null = New-Item $body -ItemType File -Force
 
   try
   {
